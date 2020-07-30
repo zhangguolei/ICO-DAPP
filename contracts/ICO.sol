@@ -2,7 +2,7 @@ pragma solidity ^0.4.22;
 
 /**
  * @title SafeMath
- * @dev Unsigned math operations with safety checks that revert on error
+ * @dev Unsigned math operations with safety checks that revert on error modified
  */
  
 library SafeMath {

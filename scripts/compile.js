@@ -18,6 +18,8 @@ contractFiles.forEach(contractFile => {
     const compiledContract = solc.compile(contractSource, 1);
     console.log('compiled contract', compiledContract);
 
+
+    
     //为了更好的显示编译过程中出现的错误
     if (Array.isArray(compiledContract.errors) && compiledContract.errors.length) {
         throw new Error(compiledContract.errors[0]);

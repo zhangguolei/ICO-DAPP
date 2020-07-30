@@ -12,6 +12,8 @@ let accounts;
 let icoList;
 let ico;
 
+
+
 describe('ICO Contract', () => {
     beforeEach(async () => {
         accounts = await web3.eth.getAccounts();

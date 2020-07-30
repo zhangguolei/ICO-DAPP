@@ -4,9 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "node scripts/compile.js",
+    "pretest": "npm run compile",
+    "test": "mocha tests/",
+    "predeploy": "npm run compile",
+    "deploy": "node scripts/deploy.js",
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "next": "^9.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "solc": "0.4.24",
+    "truffle-hdwallet-provider": "0.0.3",
+    "web3": "1.0.0-beta.34"
+  },
+  "devDependencies": {
+    "ganache-cli": "^6.9.1",
+    "mocha": "^8.0.1"
+  }
 }
